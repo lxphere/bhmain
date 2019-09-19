@@ -4,9 +4,9 @@ module.exports.run = async (bot, message, args) => {
 	let embed = new Discord.RichEmbed()
 		.setTitle("Bean House Shift")
 		.setColor("#63dfff")
-		.setDescription("Hello everyone, I am hosting a shift at the cafe! Come on and join me for a luxrious time! :link: https://www.roblox.com/games/3620192724/Bean-House-Cafe")
-		.setFooter(`Shift hosted by ${message.author.tag}`, message.author.displayAvatarURL)
-	   	.setThumbnail("https://cdn.discordapp.com/attachments/541388616774057984/546105276491759658/asdas.png");
+		.setDescription(":BeanHouseIcon: | Hello everyone, I am hosting a shift at the cafe! Come on and join me for a luxrious time! :link: https://www.roblox.com/games/3620192724/Bean-House-Cafe")
+		.setFooter(`Shift is being hosted by ${message.author.tag}`, message.author.displayAvatarURL)
+	   	.setThumbnail("https://cdn.discordapp.com/attachments/528399681185906736/624340217171542048/551253446808961035.png");
           	bot.channels.get("623994687841370114").send("@here", {embed: embed}).then(() => {
 		message.reply("Message sent!");
 	}).catch(() => {
@@ -16,8 +16,8 @@ module.exports.run = async (bot, message, args) => {
 module.exports.help = {
 	name: "shift",
 	usage: "shift <txt>",
-	description: "Announcement command, no ping.",
-	longdes: "An announcement command, with no ping.",
-	mentionedperm: "Session Perm Roles",
+	description: "Shift command.",
+	longdes: "A shift command for MR+ to use.",
+	mentionedperm: "Session Permission Role (MR+)",
 	category: "Utility"
 };
