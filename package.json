@@ -1,6 +1,6 @@
 {
-  "name": "deatheater",
-  "description": "bot for creamy cafe",
+  "name": "beanhousemain",
+  "description": "BH Bot.",
   "version": "0.0.0",
   "main": "bot.js",
   "scripts": {
