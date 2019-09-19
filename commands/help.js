@@ -32,8 +32,8 @@ module.exports.run = async (bot, message, args) => {
 						name: bot.user.username,
 						icon_url: bot.user.avatarURL
 					},
-					title: "Commands",
-					description: "K | Kauai Server Bot Commands",
+					title: "BH | Server Commands",
+					description: "These are the commands for the Bean House bot.",
 					fields: [{
 						name: "Name",
 						value: props.help.name,
@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
 					},
 					{
 						name: "Usage",
-						value: "`;" + props.help.usage + "`",
+						value: "`-" + props.help.usage + "`",
 						inline: true
 					},
 					{
@@ -69,7 +69,7 @@ module.exports.run = async (bot, message, args) => {
 			});
 		});
 	} else {
-		message.channel.send("I sent a direct message to you of the help menu! If you did not get it, please try enabling `Direct Messages from Server Members` and try again!");
+		message.channel.send("I have sent you a list of commands for this server. If you did not get it, please try enabling `Direct Messages from Server Members` and try again!");
 		message.author.send({
 			embed: {
 				color: 15844367,
@@ -77,15 +77,15 @@ module.exports.run = async (bot, message, args) => {
 					name: bot.user.username,
 					icon_url: bot.user.avatarURL
 				},
-				title: "K | Server Commands",
-				description: "K | Kauai Server Bot Commands",
+				title: "BH | Server Commands",
+				description: "These are commands for the Bean House bot.",
 				fields: [{
-					name: "Moderation",
-					value: "`;announce` - Makes an announcement for the server. \n`;ban` - Bans a user from the server. \n`;kick` - Kicks a user out of the server. \n`;hannounce` - Makes an announcement with the @ here ping."
+					name: "Utility",
+					value: "`-help` - Gives you this help menu."
 				},
 				{
-					name: "Utility",
-					value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Gives you the duration of how long the bot has been online."
+					name: "Moderation",
+					value: "Nothing to see here yet."
 				},
 				{
 					name: "Developer Commands",
@@ -93,7 +93,7 @@ module.exports.run = async (bot, message, args) => {
 				},
 				{
 					name: "Command Descriptions",
-					value: "Type `;help <command>` here in this DM to get information on a command."
+					value: "Type `-help <command>` here in this DM to get information on a command."
 				},
 				],
 				timestamp: new Date(),
