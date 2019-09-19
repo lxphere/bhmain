@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
 		.setFooter(`Shift is being hosted by ${message.author.tag}`, message.author.displayAvatarURL)
 	   	.setThumbnail("https://cdn.discordapp.com/attachments/528399681185906736/622802049448542208/1ea15beadf327b617edbe2e5ed5a7f6b.png");
           	bot.channels.get("622531865554845737").send("@here", {embed: embed}).then(() => {
-		message.reply("Message sent!");
+		message.reply("Sent! Please make sure the next shift is 45 minutes from this current shift.");
 	}).catch(() => {
 		message.reply("Something went wrong when sending the shift announcement, please check my error, <@293060399106883584>.");
 	});
