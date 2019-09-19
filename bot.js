@@ -22,43 +22,43 @@ module.exports.run = async () => {
 	});
 
 	client.on("ready", async () => {
-		client.user.setPresence({ game: { type: 3, name: "Kauai Hotels! - ;help" }, status: "online" });
+		client.user.setPresence({ game: { type: 3, name: "Bean House; Run -help!" }, status: "online" });
 		console.log(`${client.user.tag} has started!`);
 		// await noblox.cookieLogin(process.env.key);
 			
 		//rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
 	});
 
-	client.on("guildMemberAdd", (member) => {
-		const channel = member.guild.channels.find("name", "mod-logs");
-		if (!channel) return;
-		channel.send(`${member.user.tag} has joined the server!`);
-	});
-	client.on("guildMemberRemove", (member) => {
-		const channel = member.guild.channels.find("name", "mod-logs");
-		if (!channel) return;
-		channel.send(`${member.user.tag} has left the server!`);
-	});
-	client.on("messageDelete", async (message) => { if (message.author.bot) return;
-		let cha = message.guild.channels.find("name", "mod-logs");
+	//client.on("guildMemberAdd", (member) => {
+		//const channel = member.guild.channels.find("name", "mod-logs");
+		//if (!channel) return;
+		// hannel.send(`${member.user.tag} has joined the server!`);
+	//});
+	//client.on("guildMemberRemove", (member) => {
+		//const channel = member.guild.channels.find("name", "mod-logs");
+		//if (!channel) return;
+		//channel.send(`${member.user.tag} has left the server!`);
+	//});
+	//client.on("messageDelete", async (message) => { if (message.author.bot) return;
+		//let cha = message.guild.channels.find("name", "mod-logs");
 
-		if (!cha) return;
+		//if (!cha) return;
 
-		require("./resources/embed.js").mlog(cha, "Message Deleted", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Content__**: \n" + message.content, message);
-	});
-	client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
-		let cha = message.guild.channels.find("name", "mod-logs");
+		//require("./resources/embed.js").mlog(cha, "Message Deleted", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Content__**: \n" + message.content, message);
+	//});
+	//client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
+	//let cha = message.guild.channels.find("name", "mod-logs");
 
-		if (!cha) return;
+		//if (!cha) return;
 
-		require("./resources/embed.js").mlog(cha, "Message Edited", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Old Message:__**: \n" + message.content + "\n\n __**New Message**__ \n" + newmessage.content, message);
-	});
+	//require("./resources/embed.js").mlog(cha, "Message Edited", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Old Message:__**: \n" + message.content + "\n\n __**New Message**__ \n" + newmessage.content, message);
+	//});
 
 	client.on("message", async (message) => {
 
 		if (message.author.bot) return;
 
-		let prefix = ";";
+		let prefix = "-";
 
 		if (message.content.indexOf(prefix) !== 0) return;
 
