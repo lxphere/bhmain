@@ -1,0 +1,37 @@
+const axios = require("axios");
+
+let GROUP_ID = 3413904;
+let WEBHOOK =
+  "https://discordapp.com/api/webhooks/630167095128227844/jdTodqEyiEtXS4v5cvy-4x2_Jem7VuFZEKulC_aIXWe5NKMNmVqQAfjYTE0eM6kaOeid";
+let GOAL = 1300;
+let count = 0;
+
+async function updateCount() {
+  let response = await axios.get(
+    `https://groups.roblox.com/v1/groups/${GROUP_ID}/`
+  );
+  let response_count = response.data.memberCount;
+  if (count < response_count) {
+    console.log(response_count, count);
+    let opt = {
+      url: WEBHOOK,
+      method: "POST",
+      data: JSON.stringify({
+        content: `We are at ${response_count} members in our group. Only ${GOAL - response_count} members to go until we reach ${GOAL} members!`
+      }),
+      headers: {
+        "Content-Type": "multipart/form-data"
+      }
+    };
+    if (count == 0) {
+      count = response_count;
+      return;
+    }
+    axios(opt);
+    count = response_count;
+  }
+}
+
+setInterval(() => {
+  updateCount();
+}, 1000);
