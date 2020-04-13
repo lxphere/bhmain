@@ -32,7 +32,7 @@ module.exports.run = async () => {
 	client.on("guildMemberAdd", (member) => {
 		const channel = member.guild.channels.find("name", "discussion");
 		if (!channel) return;
-		 channel.send(`*Welcome to Bean House, ${@member.user.tag}! Please ensure to brief the provided information and ensure that you verify upon arrival. Thank you!* https://media.discordapp.net/attachments/693097163210883104/699223960633606164/bean_house_smaller_banner.png`);
+		 channel.send(`*Welcome to Bean House, <@" + member.id + ">! Please ensure to brief the provided information and ensure that you verify upon arrival. Thank you!* https://media.discordapp.net/attachments/693097163210883104/699223960633606164/bean_house_smaller_banner.png`);
 	});
 	//client.on("guildMemberRemove", (member) => {
 		//const channel = member.guild.channels.find("name", "mod-logs");
