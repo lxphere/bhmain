@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 					timestamp: new Date(),
 					footer: {
 						icon_url: bot.user.avatarURL,
-						text: "Bot created by Lxphere"
+						text: bot.developer.tag
 					}
 				}
 			});
