@@ -4,7 +4,7 @@ const fs = require("fs");
 module.exports.run = async () => {
 	const client = new Discord.Client({ disableEveryone: false, fetchAllMembers: true });
 	client.commands = new Discord.Collection();
-	bot.developers = ["293060399106883584", "258706134850863106", "245877990938902529"];
+	bot.developers = ["293060399106883584"];
 
 	fs.readdir("./commands", (err, files) => {
 		if (err) console.log(err);
