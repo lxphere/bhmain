@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 					timestamp: new Date(),
 					footer: {
 						icon_url: bot.user.avatarURL,
-						text: bot.developer.user.tag
+						text: `${bot.developer.user.tag}`
 					}
 				}
 			});
