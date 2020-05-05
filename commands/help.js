@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 		});
 	});
-	const devID = '436577130583949315';
+	const devID = '293060399106883584';
         const dev = bot.users.get(devID) || await bot.fetchUser(devID);
 	const command = args.shift();
 
