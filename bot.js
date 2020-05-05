@@ -4,8 +4,8 @@ const fs = require("fs");
 module.exports.run = async () => {
 	const client = new Discord.Client({ disableEveryone: false, fetchAllMembers: true });
 	client.commands = new Discord.Collection();
-	const devID = ["293060399106883584"];
-	const dev = client.users.get(devID) || await client.fetchUser(devID);
+	///const devID = ["293060399106883584"];
+	//c//onst dev = client.users.get(devID) || await client.fetchUser(devID);
 
 	fs.readdir("./commands", (err, files) => {
 		if (err) console.log(err);
