@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
 		});
 	});
 	const devID = '436577130583949315';
-        const dev = bot.users.get(devID) || await client.fetchUser(devID);
+        const dev = bot.users.get(devID) || await bot.fetchUser(devID);
 	const command = args.shift();
 
 	if (command && "../commands/" + command + ".js") {
