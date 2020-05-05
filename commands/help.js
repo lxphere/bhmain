@@ -19,7 +19,8 @@ module.exports.run = async (bot, message, args) => {
 			}
 		});
 	});
-
+	const devID = '436577130583949315';
+        const dev = bot.users.get(devID) || await client.fetchUser(devID);
 	const command = args.shift();
 
 	if (command && "../commands/" + command + ".js") {
@@ -63,7 +64,7 @@ module.exports.run = async (bot, message, args) => {
 					timestamp: new Date(),
 					footer: {
 						icon_url: bot.user.avatarURL,
-						text: "a"
+						text: `Bot created by ${dev.tag}.`
 					}
 				}
 			});
