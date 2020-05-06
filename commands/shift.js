@@ -9,14 +9,14 @@ module.exports.run = async (bot, message, args) => {
 	   	.setThumbnail("https://cdn.discordapp.com/attachments/528399681185906736/622802049448542208/1ea15beadf327b617edbe2e5ed5a7f6b.png");
           	bot.channels.get("625464803863035936").send("a", {embed: embed}).then(() => {
 		message.reply("Sent! Please make sure the next shift is **45 minutes** from this current shift.");
-	}).catch((error) => {
-		let embederror = new Discord.RichEmbed()
+		let embederr = new Discord.RichEmbed()
 		.setTitle("Bot Error:")
 		.setcolor("#ff0000")
 		.setDescription("I could not send the shift command due to: \`${error}\, the command was ran by ${message.author.tag} at **${timestamp}.**")
 		.setFooter("Bean House 2020")
-		bot.channels.get("707607323329429564").send({embed: embederror})
+		}).catch((error) => {
 		message.reply("Error occured; the developer has been sent the error message.");
+		bot.channels.get("707607323329429564").send({embed: embederr})
 	});
 };
 module.exports.help = {
