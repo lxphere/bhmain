@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args) => {
 		.setDescription("I could not send the shift command due to: \`${error}\, the command was ran by ${message.author.tag} at **${timestamp}.**")
 		.setFooter(`Bean House 2020`)
 		bot.channels.get("707607323329429564").send({embed: embederror})
+		message.reply("Error occured; the developer has been sent the error message.");
 	});
 };
 module.exports.help = {
