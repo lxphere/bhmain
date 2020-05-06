@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
           	bot.channels.get("625464803863035936").send("a", {embed: embed}).then(() => {
 		message.reply("Sent! Please make sure the next shift is **45 minutes** from this current shift.");
 
-		}).catch(error => bot.channels.get("707607323329429564").send(`An unexpected error has occured. ${message.author.tag} ran the shift command and an unexpected error occured: \n**${error}** \n *Error occured at ${timestamp}*`))
+		}).catch(error => bot.channels.get("707607323329429564").send(`An unexpected error has occured. ${message.author.tag} ran the shift command and an unexpected error occured: \n**${error}** \n*Error occured at ${timestamp}*`))
 		message.reply("Error occured; the developer has been sent the error message.");
 };
 module.exports.help = {
