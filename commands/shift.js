@@ -11,7 +11,6 @@ module.exports.run = async (bot, message, args) => {
 		message.reply("Sent! Please make sure the next shift is **45 minutes** from this current shift.");
 		}) .catch(error => bot.channels.get("707607323329429564").send(`Error: ${message.author} ran the shift command and an unexpected error occured: ${error}`))
 		message.reply("Error occured; the developer has been sent the error message.");
-	});
 };
 module.exports.help = {
 	name: "shift",
