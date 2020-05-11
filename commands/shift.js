@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.roles.get("623987915281793064")) return message.reply("You must be an MR or above to run this command.").catch(() => bot.safeSend(message, module.exports.help.name));
 	let timestamp = new Date();
-	let adminRoleObject = message.guild.roles.get('name', 'Session Tag');
 	let embed = new Discord.RichEmbed()
+	let adminRoleObject = message.guild.roles.get('name', 'Session Tag');
 		.setTitle("Bean House Shift")
 		.setColor("#faf21b")
 		.setDescription("<:BeanHouseIcon:551253446808961035> | Hello everyone, I am hosting a shift at the cafe! Come on and join me for a luxurious time! Link: https://www.roblox.com/games/3620192724/Bean-House-Cafe")
