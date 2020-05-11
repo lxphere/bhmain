@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 // const noblox = require("noblox.js");
 module.exports.run = async () => {
-	const client = new Discord.Client({ disableEveryone: false, fetchAllMembers: true });
+	const client = new Discord.Client({ disableEveryone: false, disableMentions: false, fetchAllMembers: true });
 	client.commands = new Discord.Collection();
 
 	fs.readdir("./commands", (err, files) => {
