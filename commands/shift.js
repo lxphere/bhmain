@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.roles.get("623987915281793064")) return message.reply("You must be an MR or above to run this command.").catch(() => bot.safeSend(message, module.exports.help.name));
+	if (!message.member.roles.get("716043436196888646")) return message.reply("You must be an MR or above to run this command.").catch(() => bot.safeSend(message, module.exports.help.name));
 	let timestamp = new Date();
 	let embed = new Discord.RichEmbed()
 		.setTitle("Bean House Shift")
